@@ -1,0 +1,163 @@
+@import '../utils/vars';
+
+.header {
+  width: 100%;
+  padding-top: 28px;
+  background-color: #fff;
+  position: fixed;
+  z-index: 2;
+
+  &.header--border {
+    border-bottom: 1px solid #cdcdcd;
+  }
+}
+
+.container--header {
+  display: flex;
+  justify-content: space-between;
+
+  @media screen and (min-width: $tablet) {
+    align-items: center;
+  }
+}
+
+.header__logo-link {
+  display: block;
+}
+
+.header__logo-icon {
+  fill: $main-color;
+
+  @media screen and (min-width: $tablet) {
+    width: 72px;
+    height: 57px;
+  }
+}
+
+.header__nav {
+  display: none;
+
+  @media screen and (min-width: $tablet) {
+    display: block;
+  }
+}
+
+.header__nav-list {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    gap: 24px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    gap: 48px;
+  }
+}
+
+.nav-link {
+  font-weight: 400;
+  font-size: 20px;
+  cursor: pointer;
+  color: $main-color;
+  transition: color $animation-duration $transition-timing-function;
+
+  &:hover,
+  &:focus {
+    color: $brand-color;
+  }
+}
+
+.nav-link--color {
+  color: $secondary-color;
+}
+
+.header__contact-link {
+  &:hover,
+  &:focus {
+    .header__contact-icon {
+      animation: ring-phone-hover 10s ease-in-out;
+      fill: $brand-color;
+    }
+  }
+}
+
+.header__contact-icon {
+  fill: $main-color;
+  transition: animation, fill $animation-duration $transition-timing-function;
+  animation: ring-phone-infinite 15s infinite ease-in-out;
+
+  @media screen and (min-width: $tablet) {
+    width: 24px;
+    height: 24px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.header__menu {
+  margin-left: 14px;
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.header__menu-icon {
+  fill: $main-color;
+}
+
+.header__wrapper {
+  display: flex;
+}
+
+
+
+@keyframes ring-phone-infinite {
+  0% {
+      transform: rotate(0) scale(1) skew(1deg)
+  }
+  1% {
+      transform: rotate(-25deg) scale(1) skew(1deg)
+  }
+  2% {
+      transform: rotate(25deg) scale(1) skew(1deg)
+  }
+  3% {
+      transform: rotate(-25deg) scale(1) skew(1deg)
+  }
+  4% {
+      transform: rotate(25deg) scale(1) skew(1deg)
+  }
+  5% {
+      transform: rotate(0) scale(1) skew(1deg)
+  }
+  100% {
+      transform: rotate(0) scale(1) skew(1deg)
+  }
+}
+
+@keyframes ring-phone-hover {
+  0% {
+      transform: rotate(0) scale(1) skew(1deg)
+  }
+  1% {
+      transform: rotate(-25deg) scale(1) skew(1deg)
+  }
+  2% {
+      transform: rotate(25deg) scale(1) skew(1deg)
+  }
+  3% {
+      transform: rotate(-25deg) scale(1) skew(1deg)
+  }
+  4% {
+      transform: rotate(25deg) scale(1) skew(1deg)
+  }
+  5% {
+      transform: rotate(0) scale(1) skew(1deg)
+  }
+  100% {
+      transform: rotate(0) scale(1) skew(1deg)
+  }
+}

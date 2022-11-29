@@ -1,0 +1,35 @@
+<!-- Hero -->
+
+<section class="hero">
+  <div class="hero__block container">
+    <div class="hero__top">
+      <h2 class="hero__text">flower studio</h2>
+      <img
+        class="hero-fon"
+        srcset="
+          ./images/hero/home_imgmob@1x.jpg 145w,
+          ./images/hero/home_imgmob@2x.jpg 290w,
+          ./images/hero/home_imgtab@1x.jpg 390w,
+          ./images/hero/home_imgtab@2x.jpg 780w
+        "
+        sizes="(min-width: 768px) 390px, (min-width: 320px) 145px, 100vw"
+        src="./images/hero/home_imgdesk@1x.jpg"
+        alt="Flower"
+      />
+      <button class="hero__btn" data-modal-open>
+        <svg class="hero__icon hero__icon-mob" width="64" height="76">
+          <use href="./images/hero/hero.svg/symbol-defs.svg#icon-btn-mob"></use>
+        </svg>
+        <svg class="hero__icon hero__icon-tab" width="145" height="150">
+          <use href="./images/hero/hero.svg/symbol-defs.svg#icon-btn-tab"></use>
+        </svg>
+        <svg class="hero__icon hero__icon-desk" width="166" height="166">
+          <use
+            href="./images/hero/hero.svg/symbol-defs.svg#icon-btn-desk"
+          ></use>
+        </svg>
+      </button>
+    </div>
+    <h1 class="hero__title">ANEMON<span class="hero__element">E</span></h1>
+  </div>
+</section>

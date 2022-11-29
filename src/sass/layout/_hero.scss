@@ -1,0 +1,197 @@
+.hero {
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0;
+
+    @media screen and (min-width: $tablet) {
+      padding-left: 0;
+    }
+
+    @media screen and (min-width: $desktop) {
+      padding-left: 210px;
+      justify-content: flex-start;
+    }
+  }
+
+  &__block {
+    padding-bottom: 100px;
+    padding-top: 95px;
+
+    @media screen and (min-width: $tablet) {
+      padding-top: 119px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      padding-top: 149px;
+    }
+  }
+
+  &__text {
+    width: 46px;
+    height: 34px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.2;
+    padding-left: 0;
+    margin-right: 0;
+    opacity: 0;
+    animation: hero-fl 1000ms ease 200ms forwards;
+
+    @keyframes hero-fl {
+      0% {
+        transform: translateX(-6vw);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateX(0px);
+        opacity: 1;
+      }
+    }
+
+    @media screen and (min-width: $tablet) {
+      width: 76px;
+      height: 58px;
+      font-size: 24px;
+      padding-left: 49px;
+      margin-right: 40px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: 101px;
+      height: 78px;
+      font-size: 32px;
+      padding-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 14px;
+    font-size: 52px;
+    line-height: 1.2;
+    margin-top: -25px;
+
+    @media screen and (min-width: $tablet) {
+      font-size: 120px;
+      margin-top: -52px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      font-size: 160px;
+      margin-top: -77px;
+    }
+  }
+
+  &__icon-mob {
+    cursor: pointer;
+    @media screen and (min-width: $tablet) {
+      display: none;
+    }
+
+    @media screen and (min-width: $desktop) {
+      display: none;
+    }
+  }
+
+  &__icon-tab {
+    cursor: pointer;
+    display: none;
+
+    @media screen and (min-width: $tablet) {
+      display: block;
+      margin-left: 8px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      display: none;
+    }
+  }
+
+  &__icon-desk {
+    cursor: pointer;
+    display: none;
+    @media screen and (min-width: $tablet) {
+      display: none;
+    }
+
+    @media screen and (min-width: $desktop) {
+      display: block;
+    }
+  }
+
+  &__element {
+    @media screen and (min-width: $desktop) {
+      position: relative;
+    }
+  }
+
+  &__element::after {
+    @media screen and (min-width: $desktop) {
+      content: '';
+      width: 58px;
+      height: 8px;
+      background-color: $main-color;
+      position: absolute;
+      top: 15px;
+      left: 28px;
+    }
+  }
+
+  &__btn {
+    background-color: inherit;
+    border: none;
+    padding: 0;
+    opacity: 0;
+    animation: hero-fr 1000ms ease 200ms forwards;
+
+    @keyframes hero-fr {
+      0% {
+        transform: translateX(6vw);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateX(0px);
+        opacity: 1;
+      }
+    }
+  }
+
+  &__icon:hover {
+    transform: rotateZ(360deg);
+    transform-origin: center;
+    transition: transform 700ms ease-in-out;
+  }
+
+  &-fon {
+    height: 274px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: inherit;
+    background-size: auto 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    margin-left: 14px;
+    margin-right: 8px;
+
+    @media screen and (min-width: $tablet) {
+      height: 636px;
+      margin-left: 40px;
+      margin-right: 20px;
+
+      @media screen and (min-width: $desktop) {
+        margin-left: 110px;
+        margin-right: 110px;
+        height: 636px;
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "flowers-site",
+  "version": "2.0.0",
+  "description": "",
+  "homepage": "https://yanachepyk.github.io/flowers-site/",
+  "scripts": {
+    "start": "parcel src/*.html",
+    "build": "parcel build src/*.html --public-url /flowers-site/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yanachepyk/flowers-site.git"
+  },
+  "keywords": [],
+  "author": "Chepyk Yana <yanapgp@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://yanachepyk.github.io/flowers-site/issues"
+  },
+  "dependencies": {
+    "modern-normalize": "^1.1.0",
+    "swiper": "^8.4.5"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.6.0",
+    "parcel": "^2.6.0",
+    "parcel-reporter-clean-dist": "^1.0.4",
+    "posthtml-include": "^1.7.4"
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead"
+}

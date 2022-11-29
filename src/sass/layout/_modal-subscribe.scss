@@ -1,0 +1,109 @@
+.modal-subscribe__window {
+  @media screen and (min-width: $tablet) {
+    width: calc(#{$tablet} - 90px * 2);
+    max-width: calc(100% - 90px * 2);
+  }
+
+  @media screen and (min-width: $desktop) {
+    max-width: calc(#{$desktop} - 210px * 2);
+    width: calc(#{$desktop} - 210px * 2);
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .modal-subscribe__inner {
+    display: flex;
+  }
+}
+
+.modal-subscribe__container {
+  padding: 18px 16px 28px 16px;
+
+  @media screen and (min-width: $desktop) {
+    padding: 112px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &-inner {
+    padding: 0 8px;
+    max-width: 352px;
+    margin: 0 auto;
+  }
+}
+
+.modal-subscribe__title {
+  font-size: 19px;
+  text-align: center;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 28px;
+  }
+}
+
+.modal-subscribe__text {
+  text-align: center;
+}
+
+.modal-subscribe__form-input {
+  margin-bottom: 18px;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 28px;
+  }
+}
+
+.modal-subscribe__image {
+  background: url(../images/modal-subscribe/modal-subscribe-mobile@1x.jpg) 0 0 /
+    cover no-repeat;
+  flex-grow: 0;
+  flex-shrink: 0;
+
+  @media screen and (max-width: calc(#{$tablet} - 0.02px)) and (min-device-pixel-ratio: 2),
+  screen and (max-width: calc(#{$tablet} - 0.02px)) and (-webkit-min-device-pixel-ratio: 2),
+  screen and (max-width: calc(#{$tablet} - 0.02px)) and (min-resolution: 192dpi),
+  screen and (max-width: calc(#{$tablet} - 0.02px)) and (min-resolution: 2dppx) {
+    background: url(../images/modal-subscribe/modal-subscribe-mobile@2x.jpg) 0 0 /
+      cover no-repeat;
+  }
+
+  @media screen and (min-width: $tablet) {
+    background: url(../images/modal-subscribe/modal-subscribe-tablet@1x.jpg) 0 0 /
+      cover no-repeat;
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: calc(#{$desktop} - 0.02px)) and (min-device-pixel-ratio: 2),
+  screen and (min-width: $tablet) and (max-width: calc(#{$desktop} - 0.02px)) and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min-width: $tablet) and (max-width: calc(#{$desktop} - 0.02px)) and (min-resolution: 192dpi),
+  screen and (min-width: $tablet) and (max-width: calc(#{$desktop} - 0.02px)) and (min-resolution: 2dppx) {
+    background: url(../images/modal-subscribe/modal-subscribe-tablet@2x.jpg) 0 0 /
+      cover no-repeat;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 428px;
+    background: url(../images/modal-subscribe/modal-subscribe-desktop@1x.jpg) 0
+      0 / cover no-repeat;
+  }
+
+  @media screen and (min-width: $desktop) and (min-device-pixel-ratio: 2),
+    screen and (min-width: $desktop) and (-webkit-min-device-pixel-ratio: 2),
+    screen and (min-width: $desktop) and (min-resolution: 192dpi),
+    screen and (min-width: $desktop) and (min-resolution: 2dppx) {
+    background: url(../images/modal-subscribe/modal-subscribe-desktop@2x.jpg) 0
+      0 / cover no-repeat;
+  }
+
+  &::after {
+    content: '';
+    padding-top: calc(199 / 432 * 100 * 1%);
+    display: block;
+  }
+
+  @media screen and (min-width: $desktop) {
+    &::after {
+      padding-top: calc(528 / 428 * 100 * 1%);
+    }
+  }
+}

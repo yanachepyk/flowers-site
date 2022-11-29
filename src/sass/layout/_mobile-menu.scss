@@ -1,0 +1,41 @@
+.mobile-menu {
+  background-color: $brand-color;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  padding: 16px;
+  display: flex;
+  transform: translateX(0);
+  transition: transform $animation-duration $transition-timing-function;
+
+  &.is-menu-hidden {
+    transform: translateX(-100%);
+  }
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.mobile-menu__close-icon {
+  stroke: $secondary-color;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+.mobile-nav {
+  margin: 124px auto;
+}
+
+.mobile-nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.mobile-nav__item {
+  text-align: center;
+}
